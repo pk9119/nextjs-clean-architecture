@@ -1,0 +1,30 @@
+{
+  "name": "@repo/domain",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "lint": "eslint . --max-warnings 0",
+    "lint:fix": "eslint ./src/dto --fix",
+    "generate:openapi": "openapi-generator-cli generate --generator-key v2.0 && rm -f ./src/dto/generated/* && mv ./output/dto/* ./src/dto/generated && rm -rf ./output && pnpm run lint:fix"
+  },
+  "exports": {
+    "./usecase/*": "./src/usecase/*.ts",
+    "./repository/*": "./src/repository/*.ts",
+    "./model/*": "./src/model/*.ts",
+    "./datasource/*": "./src/datasource/*.ts",
+    "./di": "./src/di/index.ts"
+  },
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "^2.13.4",
+    "@repo/core": "workspace:^",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/eslint": "^8.56.10",
+    "@types/node": "^20.14.11",
+    "eslint": "^8.57.0",
+    "reflect-metadata": "^0.2.2",
+    "tsyringe": "^4.8.0",
+    "typescript": "^5.5.3"
+  }
+}
