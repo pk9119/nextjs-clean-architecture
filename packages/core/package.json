@@ -1,0 +1,19 @@
+{
+  "name": "@repo/core",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc"
+  },
+  "exports": {
+    "./*": "./src/*.ts"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^20.14.12",
+    "typescript": "latest"
+  },
+  "dependencies": {
+    "return-fetch-json": "^0.4.6"
+  }
+}

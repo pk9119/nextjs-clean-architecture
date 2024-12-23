@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/@openapitools/openapi-generator-cli/config.schema.json",
+  "spaces": 2,
+  "generator-cli": {
+    "version": "5.3.0",
+    "generators": {
+      "v2.0": {
+        "globalProperty": "models,modelDocs=true,supportingFiles",
+        "generatorName": "typescript-jquery",
+        "output": "./output",
+        "inputSpec": "https://api.com/v3/api-docs",
+        "additionalProperties": {
+          "modelPackage": "dto",
+          "withInterfaces": "true"
+        }
+      }
+    }
+  }
+}
