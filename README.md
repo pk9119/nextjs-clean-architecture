@@ -1,10 +1,19 @@
 # NextJS + Clearn Architecture + Turborepo
 
-I set up a NextJS project structured with Clean Architecture principles, using Turborepo as the build system.
+Clearn Architecture를 도입한 NextJS 서비스를 Turborepo로 구성하였습니다.
 
 ## What's inside?
 
-This includes the following packages/apps:
+- [Turborepo](https://turbo.build/repo/docs)
+- [NextJS](https://nextjs.org/)
+- [Zustand](https://zustand-demo.pmnd.rs/)
+- [TanStack Query](https://tanstack.com/query/latest/docs/framework/react/overview)
+- [React hook form](https://react-hook-form.com/)
+- [Zod](https://zod.dev/)
+- [Tsyringe](https://github.com/microsoft/tsyringe)
+- [Shadcn/UI](https://ui.shadcn.com/)
+- [Storybook](https://storybook.js.org/)
+- [Tailwindcss](https://tailwindcss.com/)
 
 ### Apps and Packages
 
