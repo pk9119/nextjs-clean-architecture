@@ -1,6 +1,6 @@
 # 디자인 시스템 문서 서비스
 
-### What's inside?
+## What's inside?
 
 packages/ui에 정의된 component들을 storybook을 통해 서비스로 제공합니다.
 
