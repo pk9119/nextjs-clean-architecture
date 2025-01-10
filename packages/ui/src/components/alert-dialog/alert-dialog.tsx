@@ -29,7 +29,7 @@ export interface AlertDialogProps {
   actionButton?: AlertDialogActionProps
 }
 
-export function AlertDialog({ overlay = true, ...props }: AlertDialogProps) {
+export function AlertDialog({ ...props }: AlertDialogProps) {
   const { dismiss } = useAlertDialog()
 
   const buttonRef = useRef<HTMLButtonElement>(null)
@@ -52,7 +52,7 @@ export function AlertDialog({ overlay = true, ...props }: AlertDialogProps) {
     >
       {props?.trigger && <AlertDialogTrigger asChild={!isString(props.trigger)}>{props.trigger}</AlertDialogTrigger>}
       <AlertDialogPortal>
-        {overlay && <AlertDialogOverlay />}
+        {props.overlay && <AlertDialogOverlay />}
         <AlertDialogContent>
           <AlertDialogHeader>
             <AlertDialogTitle>{props.title}</AlertDialogTitle>

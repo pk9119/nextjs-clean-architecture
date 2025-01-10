@@ -14,6 +14,7 @@ const meta = {
             alertDialog({
               title: '상품 정보를 업로드 해주세요.',
               description: '필수 정보 업로드 후, 다시 시도해주세요.',
+              overlay: false,
               actionButton: { children: '확인' },
             })
           }}
