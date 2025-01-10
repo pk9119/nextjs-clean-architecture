@@ -8,6 +8,7 @@ export const useHomeViewModel = () => {
     alertDialog({
       title: 'Medium 사이트로 이동하시겠습니까?',
       description: '사이트가 이동됩니다.',
+      cancelButton: { children: '취소' },
       actionButton: {
         children: '이동',
         onClick: () => {
