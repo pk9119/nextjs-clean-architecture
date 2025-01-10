@@ -5,6 +5,7 @@ import React from 'react'
 import './globals.css'
 
 import { ReactQueryProvider, UseCaseContextProvider } from 'common/di'
+import { AlertView } from 'presenter/alert/view'
 import { MenuLayoutView } from 'presenter/menu/view'
 import Loading from './loading'
 
@@ -34,6 +35,7 @@ export default async function RootLayout({
         <ReactQueryProvider>
           <UseCaseContextProvider>
             <MenuLayoutView>{children}</MenuLayoutView>
+            <AlertView />
             <Loading />
           </UseCaseContextProvider>
         </ReactQueryProvider>

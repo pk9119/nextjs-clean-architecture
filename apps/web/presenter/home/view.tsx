@@ -1,7 +1,12 @@
+'use client'
+
+import { Button } from '@repo/ui/primitives/button'
 import Image from 'next/image'
+import { useHomeViewModel } from './view-model'
 import styles from './view.module.css'
 
 export function HomeView() {
+  const viewModel = useHomeViewModel()
   return (
     <div className={styles.page}>
       <main className={styles.main}>
@@ -14,14 +19,9 @@ export function HomeView() {
         </ol>
 
         <div className={styles.ctas}>
-          <a
-            className={'hover:text-background outline hover:bg-gray-900/80'}
-            href='https://medium.com/@loveless.cherry/react-clean-architecture-1-6d853f563e70'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
+          <Button variant={'default'} onClick={viewModel.handleGotoMedium}>
             Go to my Medium
-          </a>
+          </Button>
         </div>
       </main>
       <footer className={styles.footer}>
