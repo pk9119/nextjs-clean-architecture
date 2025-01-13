@@ -1,9 +1,10 @@
 import { singleton } from 'tsyringe'
+import { GetMemberInfoDtoRequest } from '../dto/generated/GetMemberInfoDtoRequest'
 import { GetMemberInfoDtoResult } from '../dto/generated/GetMemberInfoDtoResult'
 
 @singleton()
 export class MemberDataSource {
-  get(memberId: number): Promise<GetMemberInfoDtoResult | null> {
+  get(request: GetMemberInfoDtoRequest): Promise<GetMemberInfoDtoResult | null> {
     return new Promise(resolve => {
       setTimeout(() => {
         resolve({ loginId: 'pk911', name: 'PK911' })

@@ -1,3 +1,7 @@
+export class MemberRequestDmo {
+  constructor(public memberId: number) {}
+}
+
 export class MemberDmo {
   loginId: string
   name: string
